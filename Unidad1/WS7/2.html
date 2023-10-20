@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addOnlyNums(...arr){
+            var resultado=0;
+            
+           for(var i=0; i<=arr.length; i++){
+            
+            if(!isNaN(arr[i])){
+                resultado+=arr[i];
+            }
+            }
+            console.log(resultado);
+            document.write(resultado);
+           return resultado;
+           
+        }
+        addOnlyNums(1, 'cat', 3, 7);
+       
+    
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function paresImpares() {
+            var numerosAleatorios = [];
+        for (var i = 0; i < 100; i++) {
+        numerosAleatorios.push(Math.floor(Math.random() * 1000) + 1);
+         }
+
+  
+        document.write(numerosAleatorios+"<br><br>");
+
+        
+        var pares = [];
+        var impares = [];
+
+        for (var numero of numerosAleatorios) {
+            if (numero % 2 === 0) {
+            pares.push(numero);
+            } else {
+            impares.push(numero);
+            }
+        }
+
+       
+        document.write(["pares<br>"+pares +"<br><br>"]);
+        document.write(["impares<br>"+impares +"<br>"]);
+}
+
+
+    paresImpares();
+    </script>
+</body>
+</html>

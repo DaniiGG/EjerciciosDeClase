@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numeroAleatorio = Math.random();
+        document.write(numeroAleatorio+"<br>");
+        var numeroAleatorio2 = Math.floor(Math.random() * (101)) + 100;
+        document.write(numeroAleatorio2+"<br>");
+        var numero1=prompt("introduce un numero (primero)");
+        numero1=parseInt(numero1);
+        var numero2=prompt("introduce un numero (segundo)");
+        numero2=parseInt(numero2);
+        var numeroAleatorio3 = Math.floor(Math.random() * (numero2-numero1+1)) + (numero1);
+        document.write(numeroAleatorio3+"<br>");
+    </script>
+</body>
+</html>

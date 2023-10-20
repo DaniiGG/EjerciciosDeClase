@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   class gato {
+  constructor(nombre, tiredness = 3, hunger = 10, loneliness = 7, happiness = 5) {
+    this.nombre = nombre;
+    this.tiredness = tiredness;
+    this.hunger = hunger;
+    this.loneliness = loneliness;
+    this.happiness = happiness;
+  }
+
+  feed(cantidad = 1) {
+    this.hunger -= cantidad;
+    this.happiness += cantidad;
+  }
+
+  sleep(horas = 1) {
+    this.tiredness -= horas;
+    this.happiness += horas;
+  }
+
+  pet(times = 1) {
+    if (Math.random() < 0.5) {
+      this.loneliness -= times;
+      this.happiness += times;
+    } else {
+      console.log(this.nombre+" doesn't want to be petted right now.");
+    }
+  }
+
+  getEstado() {
+    const tirednessMsg = this.tiredness > 7 ? "muy cansado" : "poco cansado";
+    const hungerMsg = this.hunger > 7 ? "muy hambriento" : "poco hambriento";
+    const lonelinessMsg = this.loneliness > 7 ? "muy solo" : "acompañado";
+    const happinessMsg = this.happiness > 7 ? "muy feliz" : "poco feliz";
+
+    console.log(
+      this.nombre +" está "+ tirednessMsg+", " + hungerMsg +", " +lonelinessMsg, +", "+ happinessMsg);
+  }
+}
+
+var Elias =new gato("Elias");
+Elias.getEstado();
+
+Elias.feed(3);
+Elias.sleep(2);
+Elias.pet(2);
+
+Elias.getEstado();
+
+
+
+    </script>
+</body>
+</html>

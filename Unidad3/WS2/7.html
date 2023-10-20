@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a) Establecer los 10 elementos del array a cero.
+    function aCero(array) {
+        for (var i = 0; i < array.length; i++) {
+            array[i] = 0;
+        }
+    }
+
+        // b) Añadir 1 a cada uno de los elementos del array.
+    function añadir1(array) {
+        for (var i = 0; i < array.length; i++) {
+            array[i] += 1;
+        }
+    }
+
+        // c) Muestra los valores del array separados por espacios.
+    function Espacios(array) {
+        var valuesString = array.join(' ');
+        document.write(valuesString);
+    }
+
+
+    var miArray = [5, 7, 3, 8, 2, 9, 1, 0, 4, 6];
+
+
+    aCero(miArray);
+    document.write("Array después de establecer a cero:");
+    Espacios(miArray);
+
+
+    añadir1(miArray);
+    document.write(" <br>Array después de añadir uno:");
+    Espacios(miArray);
+    </script>
+</body>
+</html>

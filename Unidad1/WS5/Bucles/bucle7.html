@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero= prompt("Introduce el número a adivinar: ");
+        numero=parseInt(numero);
+        do{
+            var adivinar= prompt("Intente adivinar el número: ");
+            adivinar=parseInt(adivinar);
+            if(adivinar<numero){
+                alert("el número a adivinar es mayor");
+            }else if (adivinar>numero){
+                alert("el número a adivinar es menor");
+            }else if (adivinar==numero){
+                document.write("Enhorabuena!!");
+            }
+
+        }while(adivinar!=numero)
+    </script>
+</body>
+</html>

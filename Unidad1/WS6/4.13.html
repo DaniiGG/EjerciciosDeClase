@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var columnas = prompt("Dime un número de columnas: ");
+        columnas = parseInt(columnas);
+        var altura = prompt("Dime la altura: ");
+        altura = parseInt(altura);
+        var ancho = prompt("Dime el ancho: ");
+        ancho = parseInt(ancho);
+
+        document.write("<table border='1' cellspacing='2' bgcolor='white'>");
+        document.write("<tr bgcolor='white' height='50'>");
+
+        var i = 1;
+        while (i <= columnas) {
+            document.write('<td style="height:' + altura + 'px; width:' + ancho + 'px;"></td>');
+            i++;
+        }
+
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+</body>
+</html>

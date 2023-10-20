@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function eliminarCaracteresRepetidos(cadena) {
+  
+  cadena = cadena.replace(/\s/g, "").toLowerCase();
+
+  var caracteresUnicos = new Set();
+  var cadenaResultado = "";
+
+  for (var i = 0; i < cadena.length; i++) {
+    var caracter = cadena.charAt(i);
+    if (!caracteresUnicos.has(caracter)) {
+      caracteresUnicos.add(caracter);
+      cadenaResultado += caracter;
+    }
+  }
+
+  return cadenaResultado;
+}
+
+
+var cadenaOriginal = "holalalayeoe";
+var cadenaSinRepetidos = eliminarCaracteresRepetidos(cadenaOriginal);
+document.write(cadenaSinRepetidos);
+    </script>
+</body>
+</html>

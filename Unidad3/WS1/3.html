@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function lanzamiento(){
+            return Math.floor(Math.random() * 6) + 1;
+        }
+        
+        var posicion = [0, 0, 0, 0, 0, 0];
+
+            for (var i = 0; i < 6000; i++) {
+                var resultado = lanzamiento();
+                posicion[resultado-1]++;
+            }
+            for (var j = 0; j < posicion.length; j++) {
+                
+                document.write("Número " + (j + 1) + ": " + posicion[j] + " ocurrencias<br>");
+            }
+       
+    </script>
+</body>
+</html>

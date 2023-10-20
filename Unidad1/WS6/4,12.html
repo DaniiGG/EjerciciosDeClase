@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var columnas=prompt("Dime un número de columnas: ");
+       columnas=parseInt(columnas);
+       var altura=prompt("Dime la altura: ");
+       altura=parseInt(altura);
+       var ancho=prompt("Dime el ancho: ");
+       ancho=parseInt(ancho);
+       document.write("<table border ='1' cellspacing = '2' bgcolor = 'white'  >");
+           document.write("<tr bgcolor = 'white' height ='80'>");
+       for(var i=1; i<=columnas; i++){
+           if(i%2==0){
+               document.write("<td bgcolor = 'white' height="+altura+"width="+ancho+"> yeyyeyey</td>");
+           }else{
+               document.write("<td bgcolor = 'black' height="+altura+"width="+ancho+"> yeyyeyey</td>");
+           }
+           
+           
+       }
+       document.write("</tr>");
+       document.write("</table");
+   </script>
+</body>
+</html>

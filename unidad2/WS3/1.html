@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inviertecadena(cad_arg){
+            var cadenaInvertida = "";
+
+
+    for (var i = cad_arg.length - 1; i >= 0; i--) {
+    cadenaInvertida += cad_arg.charAt(i);
+    }
+
+    return cadenaInvertida;
+    }
+        var cadena="daniel";
+        var cadenaInvertida = inviertecadena(cadena);
+        document.write(cadenaInvertida+"<br>");
+
+        function inviertePalabras(cad_arg) {
+  
+        var palabras = cad_arg.split(" ");
+
+        var palabrasInvertidas = palabras.reverse();
+
+ 
+        var cadenaInvertida = palabrasInvertidas.join(" ");
+
+         return cadenaInvertida;
+        }
+
+
+        var cadenaOriginal = "hola dani";
+        var cadenaInvertida2 = inviertePalabras(cadenaOriginal);
+        document.write(cadenaInvertida2+"<br>");
+
+
+
+
+        function encuentraPalabraMasLarga(cad_arg) {
+  
+            var palabras = cad_arg.split(" ");
+
+            var palabraMasLarga = "";
+            var longitudMasLarga = 0;
+
+  
+            for (var i = 0; i < palabras.length; i++) {
+                var palabra = palabras[i];
+    
+            if (palabra.length > longitudMasLarga) {
+                longitudMasLarga = palabra.length;
+                palabraMasLarga = palabra;
+            }
+            }
+
+        return longitudMasLarga;
+            }
+            var cadenaOriginal = "Hola me llamo Dani";
+            var longitudPalabraMasLarga = encuentraPalabraMasLarga(cadenaOriginal);
+            document.write("longitud de la palabra más larga: " + longitudPalabraMasLarga+"<br>");
+
+
+    
+    
+            function filtraPalabrasMasLargas(cad_arg, i) {
+ 
+            var palabras = cad_arg.split(" ");
+            var contador = 0;
+
+            for (var j = 0; j < palabras.length; j++) {
+                 var palabra = palabras[j];
+    
+                if (palabra.length > i) {
+                contador++;
+                    }
+                }
+
+                return contador;
+                }
+
+
+            var cadena = "Esta es una cadena con palabras largas";
+            var longitud = 4;
+            var palabralarga = filtraPalabrasMasLargas(cadena, longitud);
+            document.write("número de palabras con longitud mayor a " + longitud + ": " + palabralarga);
+    </script>
+</body>
+</html>

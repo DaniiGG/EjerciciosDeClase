@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="etiqueta"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        window.addEventListener("scroll", scrollinfinito);
+        
+        function scrollinfinito(){
+            let scrollh=document.documentElement.scrollHeight;
+            let scrollt=document.documentElement.scrollTop;
+            let scrollch=document.documentElement.clientHeight;
+            if((scrollt + scrollch)>(scrollh-100)){
+                document.getElementById("etiqueta").innerHTML+= "<img src=imagenes/istockphoto-172964185-612x612.jpg>";
+            }
+               
+            
+            
+        }
+        </script>
+</html>

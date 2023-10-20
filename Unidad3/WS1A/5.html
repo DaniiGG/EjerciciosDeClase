@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomColorSequence(colors, length) {
+    const colorSequence = [];
+
+    if (colors.length === 0 || length <= 0) {
+
+        return colorSequence;
+    }
+
+    for (let i = 0; i < length; i++) {
+
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        
+
+        colorSequence.push(colors[randomIndex]);//randomIndex
+    }
+
+    return colorSequence;
+}
+
+    var coloresDisponibles = ["red", "blue", "green"];
+    var longitudSecuencia = 4;
+    var secuenciaAleatoria = getRandomColorSequence(coloresDisponibles, longitudSecuencia);
+    console.log(secuenciaAleatoria); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function potencias(a, b){
+            if (b == 0) {
+        return 1;
+    } else if (b < 0) {
+        
+        return 1;
+    } else {
+        
+        return a * potencias(a, b - 1);
+    }
+        }
+    
+    document.write(potencias(2,3));
+    </script>
+</body>
+</html>

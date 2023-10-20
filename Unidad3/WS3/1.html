@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Saca el mayor número
+        var numeros = [4, 5, 8, 3, 5, 1, 10];
+
+        var numeromayor = numeros[0]
+        numeros.forEach((numero) => {
+        if (numero > numeromayor) {
+            numeromayor = numero;
+            }
+        });
+
+        document.write(numeromayor+"<br><br><br>");
+
+        //Saca la palabra más larga
+
+        var palabras = ["Daniel", "Elias", "pedro"];
+
+        var palabramayor = palabras[0]
+        palabras.forEach((palabra) => {
+        if (palabra.length > palabramayor.length) {
+            palabramayor = palabra;
+            }
+        });
+        document.write(palabramayor+"<br><br><br>");
+
+
+        //numeros pares
+        var numeros = [4, 5, 8, 3, 5, 1, 10];
+        numeros.forEach((numero) => {
+        if (numero % 2==0) {
+            document.write(numero+" ");
+            }
+        });
+
+        document.write("<br><br><br>");
+        //numeros impares
+        var numeros = [4, 5, 8, 3, 5, 1, 10];
+        numeros.forEach((numero) => {
+        if (numero % 2!=0) {
+            document.write(numero+" ");
+            }
+        });
+
+        document.write("<br><br><br>");
+
+
+        //Palabras con is
+        
+        arr5=[];
+        arr5=["hola","siuu","isla","silla","piso"]; 
+        arr5.forEach (element => {
+            document.write(element+" ")
+        });
+        
+        found3 = arr5.filter(element => element.includes ('is'))
+        found3.forEach (element => {
+            document.write(element+" ");
+        });
+        document.write("<br><br><br>");
+        
+
+            //zip two arrays together
+            var numeros = [1, 2, 3];
+            var letras=["a", "b","c"];
+            numeros = numeros.concat(letras);
+            document.write(numeros+"<br><br><br>");
+
+        //divisibles entre tres
+            var numeros = [6, 5, 9, 3, 5, 1, 12];
+
+        var divisibles3= [];
+        numeros.forEach((numero) => {
+        if (numero %3==0) {
+            divisibles3.push(numero);
+            }
+        });
+        document.write(divisibles3+"<br><br><br>");
+
+
+
+        //remove the first word in the array
+        var frase = ["Hola me llamo el daniellson"];
+
+        frase.forEach((frase, index, array) => {
+        var palabras = name.split(' ');
+        palabras.shift(); 
+        array[index] = palabras.join(' '); 
+        });
+
+        document.write(frase);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cuadradopalabra() {
+  var palabra = prompt("Ingrese una palabra:");
+  var longitud = palabra.length;
+
+  document.write("<table border='1'>");
+
+  for (var i = 0; i < longitud; i++) {
+    document.write("<tr>");
+    for (var j = 0; j < longitud; j++) {
+      if (j == i || j == longitud - 1 - i) {
+        document.write("<td>" + palabra[j] + "</td>");
+      } else {
+        document.write("<td>&nbsp;</td>"); 
+      }
+    }
+    document.write("</tr>");
+  }
+
+  document.write("</table>");
+}
+
+
+cuadradopalabra();
+    </script>
+</body>
+</html>

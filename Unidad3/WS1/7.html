@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <script>
+        function factorial(a){
+            if(a==0){
+                return 1;
+            }else{
+                return a*factorial(a-1);
+            }
+        }
+        for(var i=1; i<11;i++){
+            document.write("<tr>");
+                document.write("<td>"+"Factorial del " +(i)+"</td>");
+        document.write("<td>"+factorial(i)+"</td>");
+        document.write("</tr>");
+        }
+    </script>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function combineallarrays(...args){
+            arrayCombinado=[];
+            for(i=0; i<args.length;i++){
+                arrayCombinado=[...arrayCombinado, ...args[i]];
+
+            }
+            return arrayCombinado;
+        }
+        var resultado=combineallarrays([1,2,3,4],["hola", "adios"],[true, false]);
+        console.log(resultado);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Información del Navegador Cliente</h1>
+    
+    <table border="1">
+        <tr>
+            <th>Propiedad</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td id="Color"></td>
+        </tr>
+        <tr>
+            <td>alto</td>
+            <td id="alto"></td>
+        </tr>
+        <tr>
+            <td>Ancho</td>
+            <td id="demo"></td>
+        </tr>
+        <tr>
+            <td>ancho viable</td>
+            <td id="awidth"></td>
+        </tr>
+        <tr>
+            <td>alto viable</td>
+            <td id="aheight"></td>
+        </tr>
+    </table>
+
+    <script>
+ 
+        document.getElementById("alto").innerHTML =
+            screen.height;
+        document.getElementById("demo").innerHTML =
+            screen.width;
+        document.getElementById("Color").innerHTML =
+            screen.colorDepth;
+        document.getElementById("awidth").innerHTML =
+            screen.availWidth;
+        document.getElementById("aheight").innerHTML =
+            screen.availHeight;
+        
+       
+
+    </script>
+</body>
+</html>

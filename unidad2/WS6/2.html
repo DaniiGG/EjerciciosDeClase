@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi Página Web de Ejemplo</h1>
+    
+    
+    <a href="https://www.google.com/search?q=google&oq=goo&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyCggCEAAYsQMYgAQyBggDEEUYOTIGCAQQRRhBMgYIBRBFGEEyBggGEEUYPDIGCAcQRRhB0gEIMTM5MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&bshm=rime/1">Google</a>
+    <a href="https://www.youtube.com/">Youtube</a>
+    <a href="https://educacionadistancia.juntadeandalucia.es/centros/granada/my/">Moodle</a>
+    
+    
+    <img id="imagen1" src="imagenes/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.webp" alt="Imagen 1">
+    <img src="imagenes/depositphotos_99068166-stock-photo-large-acacia-tree-in-the.jpg" alt="Imagen 2">
+    <img src="imagenes/istockphoto-172964185-612x612.jpg" alt="Imagen 3">
+    
+    
+    
+    <br> <br>
+
+    <script>
+       
+        var numeroDeImagenes = document.images.length;
+       document.write("Número de imágenes del documento: " + numeroDeImagenes+ "<br>");
+
+        
+        var idPrimeraImagen = document.images[0].id;
+        document.write("ID de la primera imagen: " + idPrimeraImagen+"<br>");
+
+        
+        var numeroDeEnlaces = document.links.length;
+        document.write("Número de enlaces del documento: " + numeroDeEnlaces);
+
+        
+        document.title = "Ejercicio 2";
+    </script>
+</body>
+</html>

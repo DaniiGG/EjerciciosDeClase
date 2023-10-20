@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fechaHoy = new Date();
+        document.write("<p>Fecha de hoy: " + fechaHoy + "</p>");
+
+        var fecha85 = new Date(fechaHoy);
+        fecha85.setDate(fecha85.getDate() + 85);
+        document.write("<p>Fecha +85 días: " + fecha85 + "</p>");
+
+
+        var fecha187 = new Date(fechaHoy);
+        fecha187.setDate(fecha187.getDate() - 187);
+        document.write("<p>Fecha -187 días: " + fecha187 + "</p>");
+
+        fecha85.setFullYear(fecha85.getFullYear() + 2);
+        document.write("<p>Fecha +2 años a fecha85: " + fecha85 + "</p>");
+
+       
+        fecha187.setHours(fecha187.getHours() - 24);
+        document.write("<p>Fecha -24 horas a fecha187: " + fecha187 + "</p>");
+
+        
+        var fechaResto = new Date(fecha85 - fecha187);
+        document.write("<p>Resultado de fecha85 - fecha187: " + fechaResto + "</p>");
+    </script>
+</body>
+</html>

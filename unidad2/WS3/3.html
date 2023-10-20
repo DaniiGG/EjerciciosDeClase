@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function encontrarApariciones(cadena, subcadena) {
+  var apariciones = [];
+  var indice = -1;
+
+  while ((indice = cadena.indexOf(subcadena, indice + 1)) !== -1) {
+    apariciones.push(indice);
+  }
+
+  return apariciones;
+}
+
+
+var cadenaPrincipal = "esta es una cadena de ejemplo. Esto es una tmb.";
+var subcadenaBuscada = "es";
+
+var apariciones = encontrarApariciones(cadenaPrincipal.toLowerCase(), subcadenaBuscada.toLowerCase());
+
+document.write("Apariciones de '" + subcadenaBuscada + "': " + apariciones);
+    </script>
+</body>
+</html>

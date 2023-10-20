@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var numero1=prompt("Introduce un número");
+            numero1=parseInt(numero1);
+        var numero2=prompt("Introduce un número");
+            numero2=parseInt(numero2);
+        var numero3=prompt("Introduce un número");
+            numero3=parseInt(numero3);
+        var numero4=prompt("Introduce un número");
+            numero4=parseInt(numero4);
+
+            function maximo(numero1, numero2, numero3, numero4){
+                return Math.max(numero1, numero2, numero3, numero4);//Math.max
+            }
+            var resultado = maximo(numero1, numero2, numero3, numero4);
+        document.write("El valor máximo es: " + resultado);
+    </script>
+</body>
+</html>

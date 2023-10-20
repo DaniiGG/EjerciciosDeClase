@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countLetter(letter, text) {
+        var characters = text.split('');
+
+    
+        var count = characters.reduce((acc, currentChar) => {
+        if (currentChar === letter) {
+            return acc + 1;
+        } else {
+            return acc;
+        }
+        }, 0);
+
+    return count;
+    }
+
+
+    var texto = "Esta es una frase de ejemplo";
+    var letraBuscada = "e";
+    var cantidad = countLetter(letraBuscada, texto);
+    document.write(`La letra "${letraBuscada}" aparece ${cantidad} veces en el texto.`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getRockPaperScissorRandomSequence(length) {
+        var opciones = ["rock", "paper", "scissor"];
+        var secuencia = [];
+    
+        for (let i = 0; i < length; i++) {
+           var indiceAleatorio = Math.floor(Math.random() * opciones.length);
+            secuencia.push(opciones[indiceAleatorio]);
+        }
+    
+        return secuencia;
+    }
+    
+   
+    var longitudSecuencia = 7;
+    var secuenciaAleatoria = getRockPaperScissorRandomSequence(longitudSecuencia);
+    document.write(secuenciaAleatoria);</script>
+</body>
+</html>

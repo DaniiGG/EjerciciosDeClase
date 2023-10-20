@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="imprimirtexto()">Imprimir Texto</button>
+   <script>
+    function imprimirtexto() {
+            
+            var texto = prompt("Escribe el texto que deseas imprimir: ");
+
+            var numveces = prompt("Introduce el número de veces que quieres imprimir el texto: ");
+            numveces=parseInt(numveces);
+                       
+            for (var i = 0; i < numveces; i++) {
+                    document.write(texto+"<br>");
+                }
+            }
+   </script> 
+</body>
+</html>

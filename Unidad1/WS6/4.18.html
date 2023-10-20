@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numcolumnas = parseInt(prompt("Ingrese el número de columnas:"));
+        var numfilas = parseInt(prompt("Ingrese el número de filas:"));
+        var altura = parseInt(prompt("Ingrese la altura de las celdas (en píxeles):"));
+        var anchura = parseInt(prompt("Ingrese la anchura de las celdas (en píxeles):"));
+    
+
+       
+  
+          document.write("<table border='1'>");
+  
+          for (var i = 0; i < numfilas; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < numcolumnas; j++) {
+              document.write("<td style='height:" + altura + "px; width:" + anchura + "px;'></td>");
+            }
+            document.write("</tr>");
+          }
+    
+          document.write("</table>");
+       
+      </script>
+</body>
+</html>

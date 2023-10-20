@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function analizarCadena(cad_arg) {
+  
+    if (cad_arg == cad_arg.toUpperCase()) {
+        return "La cadena está formada por letras mayúsculas.";
+     }
+  
+    else if (cad_arg == cad_arg.toLowerCase()) {
+        return "La cadena está formada por letras minúsculas.";
+    }
+  
+    else {
+        return "La cadena es una mezcla de letras mayúsculas y minúsculas.";
+        }
+        }
+
+
+        var cadena1 = "MAYUSCULAS";
+        var cadena2 = "minusculas";
+        var cadena3 = "MezclA";
+
+        document.write(analizarCadena(cadena3));
+    </script>
+</body>
+</html>

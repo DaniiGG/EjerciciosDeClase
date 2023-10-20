@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names = ["John Smith", "Jane Doe", "Jack Johnson", "Alice Johnson", "James Brown"];
+
+        
+        var filteredNames = names.filter((name) => name.split(' ')[0][0] === 'J');
+
+        var initials = filteredNames.map((name) => {
+        var [firstName, lastName] = name.split(' ');
+        return `${firstName[0]}.${lastName[0]}.`;
+        });
+
+        
+        initials.sort();
+
+console.log("Filtered and sorted initials:", initials);
+    </script>
+</body>
+</html>
