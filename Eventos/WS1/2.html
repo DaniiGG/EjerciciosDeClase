@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="posicionRaton">Posición del Ratón: </p>
+
+    <script>
+    // Obtén una referencia al elemento donde mostrarás la posición del ratón
+    var posicionRaton = document.getElementById("posicionRaton");
+    
+    // Agrega un manejador de eventos al documento para el evento 'mousemove'
+    document.addEventListener("mousemove", function(event) {
+        // Obtiene las coordenadas (x, y) del ratón en relación al documento
+        var x = event.clientX;
+        var y = event.clientY;
+    
+        // Actualiza el contenido del elemento 'posicionRaton' con las coordenadas del ratón
+        posicionRaton.textContent = "Posición del Ratón: X=" + x + ", Y=" + y;
+    });
+    </script>
+    
+    </body>
+    </html>
