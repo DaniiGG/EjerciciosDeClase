@@ -2,7 +2,7 @@ window.onload = function () {
     const imagenesArrastre = document.querySelectorAll('#image');
     let pegada = false;
     let imagenSeleccionada = null;
-    let offsetX, offsetY;
+    let PosicionX, PosicionY;
 
     imagenesArrastre.forEach((imagen) => {
         imagen.addEventListener('click', (e) => {
@@ -13,12 +13,12 @@ window.onload = function () {
             } else {
                 pegada = true;
                 imagenSeleccionada = imagen;
-                offsetX = e.clientX - imagenSeleccionada.getBoundingClientRect().left;
-                offsetY = e.clientY - imagenSeleccionada.getBoundingClientRect().top;
+                PosicionX = e.clientX - imagenSeleccionada.getBoundingClientRect().left;
+                PosicionY = e.clientY - imagenSeleccionada.getBoundingClientRect().top;
 
                 document.onmousemove = (e) => {
-                    const nuevoX = e.clientX - offsetX;
-                    const nuevoY = e.clientY - offsetY;
+                    const nuevoX = e.clientX - PosicionX;
+                    const nuevoY = e.clientY - PosicionY;
                     imagenSeleccionada.style.left = nuevoX + 'px';
                     imagenSeleccionada.style.top = nuevoY + 'px';
                 };

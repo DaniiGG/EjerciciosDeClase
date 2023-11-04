@@ -1,0 +1,36 @@
+body{
+    
+    background-color: rgb(246, 131, 143);
+    
+   
+}
+form #container{
+margin-left: 43%;
+text-align: initial;
+}
+form{
+    text-align: center;
+}
+input{
+    background-color: rgb(246, 131, 143);
+    border: 0;
+    text-align: center;
+}
+hr{
+   
+    border-color: yellow;
+    width: 150px;
+}
+ul{
+    color: yellow;
+}
+
+#submit{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(231, 212, 39, 0.422);
+}
+

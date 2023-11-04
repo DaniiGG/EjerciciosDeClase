@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="4.js"></script>
+    <link rel="stylesheet" type="text/css" href="4.css">
+</head>
+<body>
+    <div id="all">
+    <div id="img">
+        <img height=650 width="400" src="img/prueba.jpg">
+    </div>
+    <div id="form">
+    <h1>Formulario</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales sem at nisi malesuada, in ultrices risus egestas. Suspendisse eu turpis neque. Mauris sed nisi metus.</p>
+    <br><p>Already have an account?<b id="login"> Log in.</b></p>
+    <form id="registroForm" action="#" method="post">
+        <label for="firstName">First Name:
+        <br><input type="text" id="firstName" name="firstName" required>
+        <span id="errorNombre" class="error"></span></label>
+
+
+        <label for="lastName">Last Name:
+        <br><input type="text" id="lastName" name="lastName" required>
+        <span id="errorApellidos" class="error"></span></label>
+
+        <label for="phone">Phone:
+            <br><input type="tel" id="phone" name="phone" pattern="[0-9]{9}" required>
+            <span id="errorTelefono" class="error"></span></label>
+
+        <label for="email">Email:
+            <br><input type="email" id="email" name="email" required>
+            <span id="errorEmail" class="error"></span></label>
+
+        <label for="password">Password:
+            <br><input type="password" id="password" name="password" required><br>
+            <span id="errorContraseña" class="error"></span></label>
+
+        <label for="confirmPassword">Confirm Password:
+            <br><input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="errorContraseña2" class="error"></span></label>
+            
+        <div id="check">
+            <input type="checkbox" id="checkbox1" name="checkbox1">
+            <label for="checkbox1">Yes, I want to receive emails</label><br>
+
+            <input type="checkbox" id="checkbox2" name="checkbox2">
+        <label for="checkbox2">I agree to the <b id="login"> Terms</b>,<b id="login"> Privacy Policy</b>and <b id="login"> Fees</b>.</label><br><br><br>
+    
+        <input type="submit" value="Registrar">
+        <br><br>
+    </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

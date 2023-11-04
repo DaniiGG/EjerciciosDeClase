@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Color RGB</title>
+    <style>
+        #color-box {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        .option {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adivina el Color RGB</h1>
+    <div id="color-box"></div>
+    <div id="options">
+        <div class="option"></div>
+        <div class="option"></div>
+        <div class="option"></div>
+    </div>
+    <p id="message"></p>
+
+    <script>
+        const colorBox = document.getElementById('color-box');
+        const options = document.querySelectorAll('.option');
+        const message = document.getElementById('message');
+
+        function generarColorAleatorio() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function asignarColores() {
+            const colorCorrecto = generarColorAleatorio();
+            colorBox.style.backgroundColor = colorCorrecto;
+
+            const opciones = [colorCorrecto, generarColorAleatorio(), generarColorAleatorio()];
+            opciones.sort(() => Math.random() - 0.5);
+
+            options.forEach((option, index) => {
+                option.style.backgroundColor = opciones[index];
+                option.addEventListener('click', () => verificarAdivinanza(opciones[index]));
+            });
+        }
+
+        function verificarAdivinanza(opcion) {
+            if (opcion === colorBox.style.backgroundColor) {
+                message.textContent = '¡Correcto! Has adivinado el color.';
+            } else {
+                message.textContent = 'Incorrecto. Intenta de nuevo.';
+            }
+        }
+
+        asignarColores();
+    </script>
+</body>
+</html>

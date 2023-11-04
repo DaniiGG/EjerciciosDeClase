@@ -1,0 +1,58 @@
+#registroForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el formulario en dos columnas */
+    gap: 10px; 
+    row-gap: 30px;
+}
+#check{
+    grid-template-columns: 1fr;
+    
+}
+
+/* Estilo para las etiquetas (labels) */
+label {
+    font-weight: bold;
+}
+#img{
+    height: 100%;
+}
+
+input[type="submit"] {
+    width: auto;
+    background-color: rgb(73, 196, 249);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+}
+.error {
+    color: red;
+}
+#login{
+    color: blue;
+}
+
+
+#form {
+    float: right; /* Coloca el div a la derecha */
+    width: 90%; /* O el ancho deseado */
+}
+body{
+    font-family:sans-serif;
+    color: rgb(94, 94, 94);
+    background: linear-gradient(90deg, rgb(62, 131, 233) 0%, rgba(9,9,121,1) 35%, rgb(100, 3, 122) 100%);
+}
+#all{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    border-radius: 4px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.126);
+    background-color: white;
+    
+}
