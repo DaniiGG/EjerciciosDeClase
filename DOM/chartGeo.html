@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Miillion People'],
+          ['China', 66],
+          ['United States', 79],
+          ['Italy', 65],
+          ['Turkey', 51],
+          ['France', 89],
+          ['Mexico', 45],
+          ['Spain', 84]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+
+
+
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Partido', '%', { role: "style"}],
+          ['PP',     33, 'blue'],
+          ['PSOE',      31, 'red'],
+          ['VOX', 12.38, 'green'],
+          ['SUMAR',  12.33, "pink"],
+          ['ERC',    1.89, 'dark-red'],
+          ['JUNTS',    1.60, '#2fdbdb'],
+          ['BILDU',    1.36, 'light-blue'],
+          ['PNV',    1.12, 'dark-green']
+        ]);
+
+        var options = {
+          title: 'ELECCIONES GENERALES',
+          is3D: true,
+          colors: ['blue','red','#31ff22',"#ff22c0",'orange','#2fdbdb','lightblue','darkgreen'],
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
