@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprobación de disponibilidad de nombre de usuario</title>
+    <script>
+        function comprobarDisponibilidad() {
+            const nombreUsuario = document.getElementById('username').value;
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const xmlDoc = xhr.responseXML;
+                    const disponibilidad = xmlDoc.getElementsByTagName('disponible')[0].childNodes[0].nodeValue;
+
+                    const mensaje = disponibilidad === 'true' ? 'Disponible' : 'No disponible';
+                    alert(`Nombre de usuario '${nombreUsuario}' - ${mensaje}`);
+                }
+            };
+
+            xhr.open('GET', `4disponibilidad.php?username=${nombreUsuario}`, true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username">
+        <button type="button" onclick="comprobarDisponibilidad()">Comprobar disponibilidad</button>
+    </form>
+</body>
+</html>
