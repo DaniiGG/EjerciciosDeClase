@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <table id="miTabla">
+        
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+            <tr>
+                <th>Columna 1</th>
+                
+            </tr>
+
+            </table>
+
+
+    <script>
+        //Parte A
+        $(document).ready(function(){
+            $('tr').each(function(index) {
+                        if (index < 2) {
+                            $(this).css('background-color','red'); // Fondo rojo para las filas por encima de la tercera
+                        } else if (index > 2) {
+                            $(this).css('background-color','blue'); // Fondo azul para las filas por debajo de la tercera
+                        }
+                    });
+        });
+
+
+       
+        </script>
+</body>
+</html>

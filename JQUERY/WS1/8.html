@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div>
+        <h1>Titulo</h1>
+        <p>Texto de la noticia</p>
+    </div>
+    <div>
+        <h1>Titulo</h1>
+        <p>Texto de la noticia</p>
+    </div>
+    <div>
+        <h1>Titulo</h1>
+        <p>Texto de la noticia</p>
+    </div>
+
+
+    <script>
+        //Parte A
+        $(document).ready(function(){
+            const sizesh1 = [ "3rem","4rem","5rem", "2rem"];
+            const sizesp = [ "1.5rem", "2rem", "2.5rem", "1rem"]; // Tamaños de fuente a aplicar
+            let currentSize1 = 0; 
+            let currentSize2 = 0;// Índice del tamaño actual
+            
+            $("div").click(function(){
+                $(this).find("h1").css("font-size", sizesh1[currentSize1]);
+                $(this).find("p").css("font-size", sizesp[currentSize2]);
+                
+                // Cambiar al siguiente tamaño de fuente
+                currentSize1 = (currentSize1 + 1) % sizesh1.length;
+                currentSize2 = (currentSize2 + 1) % sizesh1.length;
+            });
+        });
+
+
+        //Parte B
+        $(document).ready(function(){
+            $("h1").click(function(){
+             $(this).next("p").toggle(); // Esto oculta el párrafo adyacente al h1
+            });
+        });
+        
+
+        //parte C
+
+        $(document).ready(function(){
+            $("p").mouseenter(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("p").mouseleave(function(){
+                $(this).css("background-color", "initial");
+            });
+        });
+        </script>
+</body>
+</html>
